@@ -2,22 +2,13 @@ let more = document.querySelector(".btn.btn-outline-primary");
 
 more.addEventListener("click",function(e) {
   e.preventDefault();
-  let where = document.querySelectorAll("form.form-group");
-  let newinput = where.createElement("input");
 
-  let newinput = `<div class="form-group">
-    <label for="formGroupExampleInput2">Option 2</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-  </div>`
-    //where.append(newinput);
-  where.innerHTML = newinput;
+  let newinput = document.createElement("form-group");
 
+  newinput.innerHTML = '<label for="formGroupExampleInput">Option </label><input type="text" class="form-control" id="formGroupExampleInput" placeholder="Another input">';
 
-	// var newdiv = document.createElement('div');
-
-    // newdiv.innerHTML = document.getElementById('form:lastchild').innerHTML;
-
-    // document.getElementById('form').append(newdiv);
+  let where = document.querySelector("form");
+  where.append(newinput);
 
 })
 
