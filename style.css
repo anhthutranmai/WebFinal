@@ -1,11 +1,12 @@
 /* css style here */
 /*  outline */
+/*
 body {
   margin: 0px;
   background-color: #5ac18e;
 }
 
-/* nav */
+
 header {
   position: fixed;
   background: transparent !important;
@@ -51,7 +52,6 @@ nav ul li a {
   text-align: center;
 }
 
-/* */
 div#banner {
   background: #198754;
   height: 50vh;
@@ -91,4 +91,12 @@ div#banner {
     height: 100%;
     border-style: 5px dashed white;
   }
+}*/
+
+nav{
+  background: #198754;
+}
+.banner{
+  height:40vh;
+  background: #5ac08e;
 }
