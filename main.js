@@ -1,5 +1,8 @@
 let more = document.querySelector(".btn.btn-outline-primary");
+let submit = document.querySelector(".btn.btn-success");
 var i = 1;
+
+let array = [];
 more.addEventListener("click",function(e) {
   e.preventDefault();
 
@@ -10,6 +13,14 @@ more.addEventListener("click",function(e) {
   let where = document.querySelector("form");
   where.append(newinput);
 
+})
+//collect input's value, push into array
+//array[0] is the poll's question
+submit.addEventListener("click",function(e){
+  e.preventDefault();
+  for (var j = 0; j <= i; j++) {
+    array.push(document.querySelector("#formGroupExampleInput" + j).value);
+  }
 })
 
 
