@@ -50,39 +50,33 @@ nav ul li a {
   text-align: center;
 }
 
-/* */
-div#banner {
+/* banner */
+#banner {
   background: #198754;
   height: 50vh;
   padding: 10vh;
   color: blue !important;
-  background-image: url("");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: bottom;
-}
-
-.quote {
   margin: auto;
-  text-align: center;
-  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media screen and (max-width: 650px) {
-div#banner {
-  background: transparent;
-  height: 50vh;
-  padding: 10vh;
-  color: white;
-  background-image: url("images/banner2.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: bottom;
-  }
-  .quote {
-    margin-top: 18vh;
-    width: 100%;
-  }
+#poll-container {
+  padding: 50px 50px 0px;
+  background-color: #c48b1f;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  border-color: #000;
+}
+
+.col-lg-4.col-md-6.col-sm-12 {
+  height: 100px;
+  width: 100px;
+  border-color: #123456;
 }
