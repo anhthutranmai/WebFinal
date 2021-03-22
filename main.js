@@ -1,4 +1,4 @@
-let more = document.querySelector(".btn.btn-outline-primary");
+let more = document.querySelector("#more");
 let submit = document.querySelector(".btn.btn-success");
 var i = 1;
 
@@ -18,10 +18,14 @@ more.addEventListener("click",function(e) {
 //array[0] is the poll's question
 submit.addEventListener("click",function(e){
   e.preventDefault();
+  window.location.href="slideshow.html";
   for (var j = 0; j <= i; j++) {
     array.push(document.querySelector("#formGroupExampleInput" + j).value);
   }
+  localStorage.setItem("array",JSON.stringify(array));
 })
+
+
 
 
 //basic ultilities may be needed
