@@ -1,51 +1,66 @@
-// import data from './data.json';
-// const data = require('./data.json');
-var storedArr = JSON.parse(localStorage.getItem("array"));
-
+let storedArr = JSON.parse(localStorage.getItem("array"));
 let pull = document.querySelector("#pull");
 let slide = document.querySelector("#slideshow");
 
-pull.addEventListener("click",function(e) {
-  e.preventDefault();
+document.addEventListener("DOMContentLoaded",function(){
+  // e.preventDefault();
+  console.log("laod");
   console.log(storedArr);
-  // for (var i = 0; i < storedArr.length; i++) {
-  //   let quiz = `<div class="row pollin" style="position:relative;left:30px;padding:10px">${storedArr[i]}</div>`;
-  //   slide.innerHTML = quiz;
-  // }
-  storedArr.forEach(function(i){
-      let quiz = `
-      <div class="row shadow-sm ml-50 mr-50 p-10 position-relative">
-        <a class="btn btn-outline-danger"><i class="fas fa-level-up-alt"></i></a>
-        <a class="btn btn-outline-primary"><i class="fas fa-level-down-alt"></i></a>
-        <div class="justify-content-end">
-          ${storedArr[i]}
-        </div>
-      </div>`;
-      slide.innerHTML = quiz;
-  });
+  for (var i = 0; i < storedArr.length; i++) {
+    // let quiz = `
+    // <div class="row shadow-sm ml-50 mr-50 p-10 position-relative">
+    //   <a class="btn btn-outline-danger"><i class="fas fa-level-up-alt"></i></a>
+    //   <a class="btn btn-outline-primary"><i class="fas fa-level-down-alt"></i></a>
+    //   <div class="justify-content-end">
+    //     ${storedArr[i]}
+    //   </div>
+    // </div>`;
+    // console.log(storedArr[i]);
+    // slide.innerHTML = quiz;
 
+    let quiz = document.createElement("div");
+    quiz.classList.add("row");
+    quiz.classList.add("shadow-sm");
+    quiz.classList.add("ml-50");
+    quiz.classList.add("mr-50");
+    quiz.classList.add("p-10");
+    quiz.classList.add("position-relative");
+    slide.appendChild(quiz);
+    // g.setAttribute("id", "Div1"); to add id
+    let up = document.createElement("a");
+    up.classList.add("btn");
+    up.classList.add("btn-outine-danger");
+    let upicon = document.createElement("i");
+    upicon.classList.add("fas");
+    upicon.classList.add("fa-level-up-alt");
+    up.appendChild(upicon);
+    slide.appendChild(up);
 
+    let dw = document.createElement("a");
+    dw.classList.add("btn");
+    dw.classList.add("btn-outline-primary");
+    let dwicon = document.createElement("i");
+    dwicon.classList.add("fas");
+    dwicon.classList.add("fa-level-down-alt");
+    dw.appendChild(dwicon);
+    slide.appendChild(dw);
 
-  // slide.innerHTML = JSON.stringify(data);
-
-  // console.log(data);
-  // getUser();
-
-})
-
-// function getUser(){
-//   var xmlhttp = new XMLHttpRequest();
-//   var url = "data.json";
-//   xmlhttp.onreadystatechange = function() {
-//       if (this.readyState == 4 && this.status == 200) {
-//           var myArr = JSON.parse(this.responseText);
-//           myFunction(myArr);
-//       }
-//   };
-//   xmlhttp.open("GET", url, true);
-//   xmlhttp.send();
-//   function myFunction(arr)
-//   {
-//      console.log(arr);
-//   }
-// }
+    let q = document.createElement("div");
+    q.classList.add("justify-content-end");
+    let content = document.createTextNode(`${storedArr[i]}`);
+    q.appendChild(content);
+    slide.appendChild(q);
+  }
+  })
+    // storedArr.forEach(function(i){
+    //     let quiz = `
+    //     <div class="row shadow-sm ml-50 mr-50 p-10 position-relative">
+    //       <a class="btn btn-outline-danger"><i class="fas fa-level-up-alt"></i></a>
+    //       <a class="btn btn-outline-primary"><i class="fas fa-level-down-alt"></i></a>
+    //       <div class="justify-content-end">
+    //         ${storedArr[i]}
+    //       </div>
+    //     </div>`;
+    //     console.log(storedArr[i]);
+    //     slide.innerHTML = quiz;
+    // });
