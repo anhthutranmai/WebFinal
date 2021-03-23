@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded",function(){
     upicon.classList.add("fas");
     upicon.classList.add("fa-level-up-alt");
     up.appendChild(upicon);
-    slide.appendChild(up);
+    quiz.appendChild(up);
 
     let dw = document.createElement("a");
     dw.classList.add("btn");
@@ -43,13 +43,13 @@ document.addEventListener("DOMContentLoaded",function(){
     dwicon.classList.add("fas");
     dwicon.classList.add("fa-level-down-alt");
     dw.appendChild(dwicon);
-    slide.appendChild(dw);
+    quiz.appendChild(dw);
 
     let q = document.createElement("div");
     q.classList.add("justify-content-end");
     let content = document.createTextNode(`${storedArr[i]}`);
     q.appendChild(content);
-    slide.appendChild(q);
+    quiz.appendChild(q);
   }
   })
     // storedArr.forEach(function(i){
