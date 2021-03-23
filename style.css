@@ -86,9 +86,4 @@ div#banner {
     margin-top: 18vh;
     width: 100%;
   }
-  div#main-col {
-    display: block;
-    height: 100%;
-    border-style: 5px dashed white;
-  }
 }
