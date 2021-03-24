@@ -8,7 +8,7 @@ more.addEventListener("click",function(e) {
 
   let newinput = document.createElement("form-group");
   i += 1;
-  newinput.innerHTML = "<label for='formGroupExampleInput" + i + "'>Option "+ i +"</label><input type='text' class='form-control' id='formGroupExampleInput" + i +"' placeholder='Another input'>";
+  newinput.innerHTML = "<label for='formGroupExampleInput" + i + "'>Option "+ i +"</label><input type='text' class='form-control' id='formGroupExampleInput" + i +"'>";
   console.log("now u have "+ i +" option");
   let where = document.querySelector("form");
   where.append(newinput);

@@ -20,73 +20,63 @@
 
   <title>A Fun Poll Generator</title>
 </head>
-<body>
-  <header>
-    <div class="logo">
-      <!-- <img src="images/logo.jpg" alt="logo"> -->
-    </div>
-    <div class="main-nav">
+<body style="height:120vh">
+  <header class="fixed-top w-100">
+    <!-- <div class="main-nav">
       <nav>
         <ul>
           <li><a href="trending.html">Trending</a></li>
           <li><a href="#">Polls</a></li>
-          <li><a href="#">About</a></li>
         </ul>
       </nav>
-    </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <h4 class="display-5 text-light">Welcome to PollGenZ !</h4>
+      <div class="navbar-collapse collapse" id="navbarToggler">
+        <ul class="nav d-flex justify-content-end">
+          <li class="nav-item p-2">
+            <a class="nav-link active text-white" href="index.html">Home</a>
+          <li class="nav-item p-2">
+            <a class="nav-link text-white" href="trending.html">Trending</a>
+          </li>
+        </ul>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </nav>
   </header>
-  <div id="banner">
+  <div id="banner" class="jumbotron-fluid text-white text-center" style="background:#198754;height:50vh;padding-top:23vh">
     <!-- <div class="quote">
       WELCOME TO POLL GENERATOR Z !!!
     </div> -->
-
-    <div id="client">
-      <div class="display-4">
-        Hello there, anoy-pollist !
-      </div>
+    <div class="display-4">
+      Hello there, New Pollist !
     </div>
   </div>
   </header>
-  <!-- Navigation Bar -->
-  <!-- <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link active" href="#">Active</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-    </li>
-  </ul> -->
-
-  <!-- search bar -->
-
   <!-- Poll Carousel -->
 
   <!-- Poll Form -->
-  <form>
-    <div class="form-group">
-      <label for="formGroupExampleInput0">Poll Here</label>
-      <input type="text" class="form-control" id="formGroupExampleInput0" placeholder="Example input">
-    </div>
-    <div class="form-group">
-      <label for="formGroupExampleInput1">Option 1 </label>
-      <input type="text" class="form-control" id="formGroupExampleInput1" placeholder="Another input">
-    </div>
-    <!--new input here-->
+  <div class="container py-4">
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput0">Poll Quiz</label>
+        <input type="text" class="form-control" id="formGroupExampleInput0">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput1">Option 1 </label>
+        <input type="text" class="form-control" id="formGroupExampleInput1">
+      </div>
+      <!--new input below here-->
 
-  </form>
-  <a class="btn btn-outline-primary" id="more" href="#" role="button">more option</a>
-  <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+      <!-- create your poll now with buttons-->
+    <a class="btn btn-outline-primary" id="more" href="#" role="button">more option</a>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+  <div class="space" style="height:10vh">
 
-  <!-- create your poll now with buttons-->
-
-
-
+  </div>
 
   <!-- footer -->
   <footer class="page-footer bg-dark">
@@ -108,18 +98,18 @@
     <div class="container text-center text-md-left mt-5">
       <div class="row">
         <div class="col-md-3 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold">Poll Generator Z</h6>
-          <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 150px;height: 2px;">
-          <p class="mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo eveniet numquam</p>
+          <h6 class="text-uppercase font-weight-bold text-white">Poll Generator Z</h6>
+          <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width:150px;height:2px;">
+          <p class="mt-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo eveniet numquam</p>
         </div>
 
         <div class="col-md-3 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold">Contact Us</h6>
-          <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width: 150px;height: 2px;">
+          <h6 class="text-uppercase font-weight-bold text-white">Contact Us</h6>
+          <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width:150px;height:2px;">
           <ul class="list-inline">
-            <li class="list-inline-item">Lorem ipsum</li>
-            <li class="list-inline-item">Phasellus iaculis</li>
-            <li class="list-inline-item">Nulla volutpat</li>
+            <li class="list-inline-item text-white">Lorem ipsum</li>
+            <li class="list-inline-item text-white">Phasellus iaculis</li>
+            <li class="list-inline-item text-white">Nulla volutpat</li>
           </ul>
         </div>
 

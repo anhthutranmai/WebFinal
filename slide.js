@@ -53,22 +53,30 @@ document.addEventListener("DOMContentLoaded",function(){
 
   //fetch comment from jsonplaceholder
   cmtAppear();
+  cmtAppear();
 })
 let cmt = document.querySelector("#comment");
 
 function cmtAppear(){
+  let maindiv = document.createElement("div");
+  maindiv.classList.add("pb-4");
+  maindiv.classList.add("d-flex");
+  cmt.appendChild(maindiv);
+
   let imgdiv = document.createElement("div");
   imgdiv.classList.add("col-4");
   imgdiv.classList.add("d-flex");
   imgdiv.classList.add("flex-sm-shrink-0");
-  cmt.appendChild(imgdiv);
+  maindiv.appendChild(imgdiv);
 
   let cmtdiv = document.createElement("div");
   cmtdiv.classList.add("col-8");
-  cmt.appendChild(cmtdiv);
+  maindiv.appendChild(cmtdiv);
 
   getUser(imgdiv);
   getComment(cmtdiv);
+
+
 
 }
 function getUser(imgdiv){
