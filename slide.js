@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded",function(){
     quiz.classList.add("py-2");
     quiz.classList.add("px-1");
     quiz.classList.add("position-relative");
+    quiz.classList.add("d-flex");
     slide.appendChild(quiz);
     // g.setAttribute("id", "Div1"); to add id
 
@@ -38,92 +39,90 @@ document.addEventListener("DOMContentLoaded",function(){
     up.appendChild(upicon);
     quiz.appendChild(up);
 
+    let txt = document.createElement("div");
+    txt.classList.add("flex-grow-1");
+    quiz.appendChild(txt);
+
     let q = document.createElement("p");
     // q.classList.add("justify-content-end");
     q.classList.add("text-center");
     let content = document.createTextNode(`${storedArr[i]}`);
     q.appendChild(content);
-    quiz.appendChild(q);
+    txt.appendChild(q);
   }
 
   //fetch comment from jsonplaceholder
-  getUser();
-  getComment();
+  cmtAppear();
+  cmtAppear();
 })
 let cmt = document.querySelector("#comment");
 
-function getUser(){
+function cmtAppear(){
+  let maindiv = document.createElement("div");
+  maindiv.classList.add("pb-4");
+  maindiv.classList.add("d-flex");
+  cmt.appendChild(maindiv);
+
+  let imgdiv = document.createElement("div");
+  imgdiv.classList.add("col-4");
+  imgdiv.classList.add("d-flex");
+  imgdiv.classList.add("flex-sm-shrink-0");
+  maindiv.appendChild(imgdiv);
+
+  let cmtdiv = document.createElement("div");
+  cmtdiv.classList.add("col-8");
+  maindiv.appendChild(cmtdiv);
+
+  getUser(imgdiv);
+  getComment(cmtdiv);
+
+
+
+}
+function getUser(imgdiv){
   let xhr = new XMLHttpRequest();
   xhr.open("GET","https://randomuser.me/api",true);
   xhr.onload = function() {
     if(this.status == 200) {
         let res = JSON.parse(this.responseText);
         console.log(res.results[0].picture.thumbnail);
+
+        // let imgdiv = document.createElement("div");
+        // imgdiv.classList.add("w-25");
+        // imgdiv.classList.add("d-flex");
+        // imgdiv.classList.add("inline-block");
+        // cmt.appendChild(imgdiv);
+
         let ava = document.createElement("img");
-        ava.classList.add("round-circle");
+        ava.classList.add("rounded-circle");
         ava.setAttribute("src",`${res.results[0].picture.thumbnail}`);
-        cmt.appendChild(ava);
+        imgdiv.appendChild(ava);
 
         let name = document.createElement("h5");
         name.classList.add("font-weight-bold");
+        // name.classList.add("flex-shrink-0");
         let n = document.createTextNode(`${res.results[0].name.first} ${res.results[0].name.last}`);
         name.appendChild(n);
-        cmt.appendChild(name);
-
-        // for (var i = 0; i < 3; i++) {
-        //   console.log(res[i]);
-        //   let newcmt = document.createElement("div");
-        //   let user = document.createElement("a");
-        //   let username = document.createTextNode(`${res[i].name}`);
-        //   user.appendChild(username);
-        //   cmt.appendChild(user);
-        //
-        //   let line = document.createElement("p");
-        //   let text = document.createTextNode(`${res[i].body}`);
-        //   line.appendChild(text);
-        //   cmt.appendChild(line);
-        // }
-      
+        imgdiv.appendChild(name);
       }
   }
   xhr.send();
-
-
 }
 
-function getComment(){
+function getComment(cmtdiv){
   let xhr = new XMLHttpRequest();
   xhr.open("GET","https://jsonplaceholder.typicode.com/comments",true);
   xhr.onload = function() {
-    let res = JSON.parse(this.responseText);
-    console.log(res[0]);
-    let line = document.createElement("p");
-    let text = document.createTextNode(`${res[0].body}`);
-    line.appendChild(text);
-    cmt.appendChild(line);
-  }
+    if(this.status == 200){
+      let res = JSON.parse(this.responseText);
+      let pos = Math.floor((Math.random() * res.length) + 1);
+      console.log(res[pos].body);
 
+      let line = document.createElement("p");
+      let text = document.createTextNode(`${res[pos].body}`);
+      line.appendChild(text);
+      cmtdiv.appendChild(line);
+    }
+  }
   xhr.send();
 }
-  // let xhr = new XMLHttpRequest();
-  // xhr.open("GET","http://jsonplaceholder.typicode.com/comments",true);
-  // xhr.onload = function() {
-  //   if(this.status == 200) {
-  //       let res = JSON.parse(this.responseText);
-  //       for (var i = 0; i < 3; i++) {
-  //         console.log(res[i]);
-  //         let newcmt = document.createElement("div");
-  //         newcmt.classList.add("row");
-  //         let user = document.createElement("a");
-  //         let username = document.createTextNode(`${res[i].name}`);
-  //         user.appendChild(username);
-  //         cmt.appendChild(user);
-  //
-  //         let line = document.createElement("p");
-  //         let text = document.createTextNode(`${res[i].body}`);
-  //         line.appendChild(text);
-  //         cmt.appendChild(line);
-  //       }
-  //     }
-  // }
-  // xhr.send();
