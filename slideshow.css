@@ -1,0 +1,12 @@
+.jumbotron-fluid.d-flex.align-items-center {
+  background: #5ac08e;
+  height: 50vh;
+}
+
+#slideshow {
+  border-radius: 10px;
+}
+
+#comment {
+  border-radius: 15px;
+}
