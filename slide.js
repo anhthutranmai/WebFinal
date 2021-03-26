@@ -1,12 +1,15 @@
 let storedArr = JSON.parse(localStorage.getItem("array"));
 let pull = document.querySelector("#pull");
 let slide = document.querySelector("#slideshow");
+let qes = document.querySelector("#qes");
 
 document.addEventListener("DOMContentLoaded",function(){
   // e.preventDefault();
   console.log("laod");
   console.log(storedArr);
-  for (var i = 0; i < storedArr.length; i++) {
+  let s = document.createTextNode(`${storedArr[0]}`);
+  qes.appendChild(s);
+  for (var i = 1; i < storedArr.length; i++) {
     let quiz = document.createElement("div");
     quiz.classList.add("row");
     quiz.classList.add("shadow-sm");
