@@ -1,11 +1,12 @@
 //Get the button:
 mybutton = document.getElementById("myBtn");
+let spin = document.querySelector(".spinner-border");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
     mybutton.style.display = "block";
   } else {
     mybutton.style.display = "none";
@@ -23,6 +24,7 @@ $(document).ready(function () {
 		loop: true,
 		margin: 10,
 		nav: true,
+    dots: false,
 		responsive: {
 			0: {
 				items: 1,
@@ -31,7 +33,7 @@ $(document).ready(function () {
 				items: 3,
 			},
 			1000: {
-				items: 5,
+				items: 4,
 			},
 		},
 	});
