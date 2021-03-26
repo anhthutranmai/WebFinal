@@ -23,32 +23,34 @@
 
   <title>A Fun Poll Generator</title>
 </head>
+
 <body style="height:120vh;font-family: 'Grandstander', cursive;">
   <header class="fixed-top w-100">
-    <!-- <div class="main-nav">
-      <nav>
-        <ul>
-          <li><a href="trending.html">Trending</a></li>
-          <li><a href="#">Polls</a></li>
-        </ul>
-      </nav>
+    <!-- <div class="main-nav"> 
+      <nav> 
+        <ul> 
+          <li><a href="trending.html">Trending</a></li> 
+          <li><a href="#">Polls</a></li> 
+        </ul> 
+      </nav> 
     </div> -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <h4 class="display-5 text-light">Welcome to PollGenZ !</h4>
       <div class="navbar-collapse collapse" id="navbarToggler">
         <ul class="nav d-flex justify-content-end">
           <li class="nav-item p-2">
-            <a class="nav-link active text-white" href="#">Home</a>
+            <a class="nav-link active" href="#">Home</a>
           <li class="nav-item p-2">
-            <a class="nav-link text-white" href="trending.html">Trending</a>
+            <a class="nav-link" href="trending.html">Trending</a>
           </li>
         </ul>
       </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </nav>
   </header>
-  <div id="banner" class="jumbotron-fluid text-white text-center" style="background:#198754;height:50vh;padding-top:23vh">
+  <div id="banner" class="jumbotron-fluid text-center" style="background:#198754;height:50vh;padding-top:23vh">
     <div class="display-4">
       Hello there, New Pollist !
     </div>
@@ -70,25 +72,25 @@
       <!--new input below here-->
 
     </form>
-      <!-- create your poll now with buttons-->
-    <a class="btn btn-outline-primary" id="more" href="#" role="button">more option</a>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <!-- create your poll now with buttons-->
+    <a class="btn shiny grow" id="more" href="#" role="button">more option</a>
+    <button type="submit" class="btn submit shiny grow">Submit</button>
   </div>
   <div class="space" style="height:10vh">
 
   </div>
 
   <!-- footer -->
-  <footer class="page-footer bg-dark">
+  <footer class="page-footer bg-lemon text-dark">
 
-    <div class="bg-success">
+    <div class="bg-brown">
       <div class="container">
         <div class="row py-4 d-flex align-items-center">
 
           <div class="col-md-12 text-center">
-            <a href="#"><i class="fab fa-facebook-f text-white mr-4"></i></a>
-            <a href="#"><i class="fab fa-twitter text-white mr-4"></i></a>
-            <a href="#"><i class="fab fa-instagram text-white mr-4"></i></a>
+            <a href="#"><i class="fab fa-facebook-f mr-4 text-white"></i></a>
+            <a href="#"><i class="fab fa-twitter mr-4 text-white"></i></a>
+            <a href="#"><i class="fab fa-instagram mr-4 text-white"></i></a>
           </div>
         </div>
       </div>
@@ -98,18 +100,19 @@
     <div class="container text-center text-md-left mt-5">
       <div class="row">
         <div class="col-md-3 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold text-white">Poll Generator Z</h6>
+          <h6 class="text-uppercase font-weight-bold ">Poll Generator Z</h6>
           <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width:150px;height:2px;">
-          <p class="mt-2 text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo eveniet numquam</p>
+          <p class="mt-2 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo eveniet numquam
+          </p>
         </div>
 
         <div class="col-md-3 mx-auto mb-4">
-          <h6 class="text-uppercase font-weight-bold text-white">Contact Us</h6>
+          <h6 class="text-uppercase font-weight-bold ">Contact Us</h6>
           <hr class="bg-success mb-4 mt-0 d-inline-block mx-auto" style="width:150px;height:2px;">
           <ul class="list-inline">
-            <li class="list-inline-item text-white">Lorem ipsum</li>
-            <li class="list-inline-item text-white">Phasellus iaculis</li>
-            <li class="list-inline-item text-white">Nulla volutpat</li>
+            <li class="list-inline-item">Lorem ipsum</li>
+            <li class="list-inline-item">Phasellus iaculis</li>
+            <li class="list-inline-item">Nulla volutpat</li>
           </ul>
         </div>
 
@@ -123,11 +126,11 @@
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use 
        https://firebase.google.com/docs/web/setup#available-libraries -->
 
   <script>
-    // Your web app's Firebase configuration
+    // Your web app's Firebase configuration 
     var firebaseConfig = {
       apiKey: "AIzaSyCM8aU36laaM5oHJyzm9ImDa4QjJfUa8D0",
       authDomain: "pollgenz.firebaseapp.com",
@@ -136,7 +139,7 @@
       messagingSenderId: "581750455830",
       appId: "1:581750455830:web:b234b548cb2c577f95ff37"
     };
-    // Initialize Firebase
+    // Initialize Firebase 
     firebase.initializeApp(firebaseConfig);
   </script>
   <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
