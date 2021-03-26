@@ -17,13 +17,13 @@
     <link rel="stylesheet" href="trending.css">
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="https://www.logodesign.net/images/illustration-logo.png" alt="logo">
+    <header class="fixed-top bg-transparent">
+      <div class="logo ml-3 mt-2">
+        <img src="https://www.logodesign.net/images/illustration-logo.png" class="position-absolute" alt="logo">
       </div>
-      <div class="main-nav">
+      <div class="main-nav position-absolute">
         <nav>
-          <ul>
+          <ul class="d-inline-flex">
             <li><a href="index.html">Home</a></li>
             <li><a href="#">Trending</a></li>
             <li><a href="#">Polls</a></li>
@@ -32,207 +32,88 @@
       </div>
     </header>
     <div id="banner">
-      <div class="owl-carousel owl-theme d-flex">
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
 
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
+      <div id="carouselExampleControls" class="carousel slide mt-5" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="card">
+        <div class="card-body text-center">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            a
+          </p>
+          <div class="row">
+            <div class="col text-center">
+              <button class="btn btn-primary far fa-thumbs-up"></button>
+              <p class="upvotes">12345</p>
             </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
 
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
+            <div class="col text-center">
+              <button class="btn btn-primary far fa-thumbs-down"></button>
+              <p class="downvotes">6789</p>
             </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
 
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
-
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
-
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
-
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
-
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
-
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="card" style="width: 18rem;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-              <div class="row">
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-up"></button>
-                  <p class="upvotes">12345</p>
-                </div>
-
-                <div class="col text-center">
-                  <button class="btn btn-primary far fa-thumbs-down"></button>
-                  <p class="downvotes">6789</p>
-                </div>
-
-              </div>
-            </div>
           </div>
         </div>
       </div>
 
+    </div>
+    <div class="carousel-item">
+      <div class="card" >
+        <div class="card-body text-center">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            b
+          </p>
+          <div class="row">
+            <div class="col text-center">
+              <button class="btn btn-primary far fa-thumbs-up"></button>
+              <p class="upvotes">12345</p>
+            </div>
+
+            <div class="col text-center">
+              <button class="btn btn-primary far fa-thumbs-down"></button>
+              <p class="downvotes">6789</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="carousel-item">
+      <div class="card" >
+        <div class="card-body text-center">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.
+          </p>
+          <div class="row">
+            <div class="col text-center">
+              <button class="btn btn-primary far fa-thumbs-up"></button>
+              <p class="upvotes">12345</p>
+            </div>
+
+            <div class="col text-center">
+              <button class="btn btn-primary far fa-thumbs-down"></button>
+              <p class="downvotes">6789</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
       <!-- <nav class="navbar navbar-light bg-light">
         <form class="form-inline">
