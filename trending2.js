@@ -1,4 +1,4 @@
-let init = [
+const init = [
   [
     'a or b ?',
     'a',
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 function exec() {
   for (var i = 0; i < init.length; i++) {
-    if (this.innerHTML == init[i][0]){
+    if (init[i][0] === this.innerHTML){
       console.log(this.innerHTML);
       localStorage.setItem("array",JSON.stringify(init[i]));
     }
