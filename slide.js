@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	//fetch comment from jsonplaceholder
 	cmtAppear();
 	cmtAppear();
-  
+  localStorage.clear();
 });
 let cmt = document.querySelector("#comment");
 
@@ -134,6 +134,7 @@ function getUser(imgdiv) {
 
 			let name = document.createElement("h5");
 			name.classList.add("font-weight-bold");
+			name.classList.add("m-auto");	
 			// name.classList.add("flex-shrink-0");
 			let n = document.createTextNode(
 				`${res.results[0].name.first} ${res.results[0].name.last}`
