@@ -1,4 +1,6 @@
 let storedArr = JSON.parse(localStorage.getItem("array"));
+console.log(localStorage);
+
 let pull = document.querySelector("#pull");
 let slide = document.querySelector("#slideshow");
 let qes = document.querySelector("#qes");
@@ -95,22 +97,36 @@ let cmt = document.querySelector("#comment");
 
 function cmtAppear() {
 	let maindiv = document.createElement("div");
-	maindiv.classList.add("pb-4");
+	maindiv.classList.add("row");
 	maindiv.classList.add("d-flex");
 	cmt.appendChild(maindiv);
 
 	let imgdiv = document.createElement("div");
-	imgdiv.classList.add("col-4");
+	imgdiv.classList.add("col-lg-4");
+	imgdiv.classList.add("col-md-4");
+	imgdiv.classList.add("col-sm-12");
+	imgdiv.classList.add("col-xs-12");
 	imgdiv.classList.add("d-flex");
 	imgdiv.classList.add("flex-sm-shrink-0");
 	maindiv.appendChild(imgdiv);
 
 	let cmtdiv = document.createElement("div");
-	cmtdiv.classList.add("col-8");
+	cmtdiv.classList.add("col-lg-4");
+	cmtdiv.classList.add("col-md-4");
+	cmtdiv.classList.add("col-sm-12");
+	imgdiv.classList.add("col-xs-12");
 	maindiv.appendChild(cmtdiv);
+
+	let namediv = document.createElement("div");
+	namediv.classList.add("col-lg-4");
+	namediv.classList.add("col-md-4");
+	namediv.classList.add("col-sm-12");
+	namediv.classList.add("col-xs-12");
+	maindiv.appendChild(namediv);
 
 	getUser(imgdiv);
 	getComment(cmtdiv);
+	getName(namediv);
 }
 
 function getUser(imgdiv) {
@@ -129,12 +145,13 @@ function getUser(imgdiv) {
 
 			let ava = document.createElement("img");
 			ava.classList.add("rounded-circle");
+			ava.style.width = "20vh";
 			ava.setAttribute("src", `${res.results[0].picture.thumbnail}`);
 			imgdiv.appendChild(ava);
 
 			let name = document.createElement("h5");
 			name.classList.add("font-weight-bold");
-			name.classList.add("m-auto");	
+			name.classList.add("m-auto");
 			// name.classList.add("flex-shrink-0");
 			let n = document.createTextNode(
 				`${res.results[0].name.first} ${res.results[0].name.last}`
@@ -144,6 +161,28 @@ function getUser(imgdiv) {
 		}
 	};
 	xhr.send();
+}
+
+function getName(namediv) {
+	let xhr = new XMLHttpRequest();
+	xhr.open("GET", "https://randomuser.me/api", true);
+	xhr.onload = function () {
+		if (this.status == 200) {
+			let res = JSON.parse(this.responseText);
+
+			let name = document.createElement("h5");
+			name.classList.add("font-weight-bold");
+			name.classList.add("m-auto");
+			name.classList.add("text-center");
+
+			// name.classList.add("flex-shrink-0");
+			let n = document.createTextNode(
+				`${res.results[0].name.first} ${res.results[0].name.last}`
+			);
+			name.appendChild(n);
+			namediv.appendChild(name);
+		}
+	};
 }
 
 function getComment(cmtdiv) {
