@@ -5,7 +5,14 @@ mybutton = document.getElementById("myBtn");
 window.onscroll = function () {
 	scrollFunction();
 };
+let spinner = document.querySelector("#spinner");
 
+document.addEventListener("DOMContentLoaded",function(){
+  spinner.style.display = "none";
+  setTimeout(function(){
+    spinner.style.display = "block";
+  }3000);
+})
 function scrollFunction() {
 	if (document.body.scrollTop > 25 || document.documentElement.scrollTop > 25) {
 		mybutton.style.display = "block";
