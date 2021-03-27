@@ -1,3 +1,21 @@
+let init = [
+  {
+    'quiz' : "a or b ?",
+    'option1' : 'a',
+    'option2' : 'b'
+  },
+  {
+    'quiz' : 'c, d?',
+    'option1' : 'c',
+    'option2' : 'd'
+  },
+  {
+    'quiz':'e, f?',
+    'option1':'e',
+    'option2':'f'
+  }
+]
+
 //Get the button:
 mybutton = document.getElementById("myBtn");
 
@@ -36,3 +54,31 @@ $(document).ready(function () {
 		},
 	});
 });
+
+//init polls in
+
+function exec() {
+  var selLink = document.getElementsByClassName("ttt");
+  console.log(selLink.innerHTML);
+  selLink.addEventListener("click",function(){
+    for(let i = 0; i < init.length ; i++) {
+      //if(`${init[i].quiz}` == selLink.innerHTML){
+          localStorage.setItem("array",JSON.stringify(init[i]));
+      //}
+    }
+  })
+
+}
+
+
+// exec();
+let where = document.getElementsByClassName("ttt");
+document.addEventListener("DOMContentLoaded",function(){
+  for(let i=0; i<init.length; i++) {
+    let txt = document.createTextNode(`${init[i].quiz}`);
+    where[i].appendChild(txt);
+  }
+  exec();
+})
+
+// let llink = document.querySelectorAll('.display-2.text-center');
