@@ -67,3 +67,12 @@
   padding: 10vh;
   color: blue !important;
 }
+
+.ttt {
+  text-decoration: none !important;
+}
+
+hr {
+  width:150px;
+  height:2px;
+}

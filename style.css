@@ -1,6 +1,8 @@
 /* css style here */
 body {
 	overflow-x: hidden; /*so things still stay within browser window*/
+	height:100vh;
+	font-family: 'Grandstander', cursive;
 }
 
 /* for typography */
@@ -8,6 +10,21 @@ h1,
 h2,
 h3,
 p {
+}
+
+#banner {
+	background:#198754;
+	height:50vh;
+	padding-top:23vh;
+}
+
+.space {
+	height:10vh;
+}
+
+hr {
+	width:150px;
+	height:2px;
 }
 
 /* for navbar */

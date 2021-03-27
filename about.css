@@ -1,3 +1,8 @@
+body {
+	height:90vh;
+	font-family: 'Grandstander', cursive;
+}
+
 .bg-orange {
 	background-color: #fa9f42;
 }
@@ -36,4 +41,18 @@
 .container .fab {
 	font-size: 3rem;
 	padding-right: 1.8rem;
+}
+
+.container-fluid.pt-5 {
+	height:70vh;
+	padding-top:30vh;
+}
+
+.container-fluid {
+	height:40vh;
+}
+
+hr {
+	width:150px;
+	height:2px;
 }
