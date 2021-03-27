@@ -5,3 +5,8 @@
 .bg-lemon {
 	background-color: #f7fe72;
 }
+
+.navbar-brand img {
+	height: 2.8rem;
+	width: auto;
+}

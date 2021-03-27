@@ -37,7 +37,8 @@
 
 /*navbar brand will edit later if having image*/
 .navbar-brand img {
-	height: 2rem;
+	height: 2.8rem;
+	width: auto;
 }
 
 .navbar li {
