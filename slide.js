@@ -96,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
 let cmt = document.querySelector("#comment");
 
 function cmtAppear() {
+
 	let maindiv = document.createElement("div");
 	maindiv.classList.add("row");
 	maindiv.classList.add("d-flex");

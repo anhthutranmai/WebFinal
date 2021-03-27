@@ -12,7 +12,7 @@ body {
   border-radius: 12px;
 }
 
-#comment {
+.comment-container {
   border-radius: 50px;
 }
 

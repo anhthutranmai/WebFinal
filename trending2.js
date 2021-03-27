@@ -59,7 +59,7 @@ $(document).ready(function () {
 
 function exec() {
   for (var i = 0; i < init.length; i++) {
-    if (init[i][0] === this.innerHTML){
+    if (this.innerHTML = init[i][0]){
       console.log(this.innerHTML);
       localStorage.setItem("array",JSON.stringify(init[i]));
     }
