@@ -14,8 +14,12 @@ p {
 .navbar {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 0.9rem;
+	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
+}
+
+.nav-item.active {
+	text-decoration: underline;
 }
 
 /*navbar brand will edit later if having image*/
@@ -80,6 +84,7 @@ p {
 
 .container .fab {
 	font-size: 3rem;
+	padding-right: 1.8rem;
 }
 
 #more {
