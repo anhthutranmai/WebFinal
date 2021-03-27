@@ -18,6 +18,10 @@
 	letter-spacing: 0.1rem;
 }
 
+.navbar li {
+	padding-right: 1.8rem;
+}
+
 .nav-item.active {
 	text-decoration: underline;
 }
