@@ -1,14 +1,19 @@
+body {
+  height:120vh;
+  font-family: 'Grandstander', cursive;
+}
+
 .jumbotron-fluid.d-flex.align-items-center {
   background: #5ac08e;
-  height: 50vh;
+  height: 100vh;
 }
 
 #slideshow {
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 #comment {
-  border-radius: 15px;
+  border-radius: 50px;
 }
 
 .bg-orange {
@@ -54,4 +59,9 @@
 	transform: scale(1.3);
 	-webkit-transform: scale(1.3);
 	-ms-transform: scale(1.3);
+}
+
+hr {
+  width:150px;
+  height:2px;
 }

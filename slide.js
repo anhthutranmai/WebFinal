@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	//fetch comment from jsonplaceholder
 	cmtAppear();
 	cmtAppear();
+  localStorage.clear();
 });
 let cmt = document.querySelector("#comment");
 

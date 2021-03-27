@@ -62,8 +62,17 @@
 
 /* banner */
 #banner {
-  /*background: #198754;*/
-  /*height: 50vh;*/
-  /*padding: 10vh;*/
+  background: #198754;
+  height: 50vh;
+  padding: 10vh;
   color: blue !important;
+}
+
+.ttt {
+  text-decoration: none !important;
+}
+
+hr {
+  width:150px;
+  height:2px;
 }
