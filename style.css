@@ -38,9 +38,10 @@ p {
 	height: 50vh;
 }
 
-.bg-brown {
-	background-color: #757761;
+.bg-orange {
+	background-color: #fa9f42;
 }
+
 
 .bg-lemon {
 	background-color: #f7fe72;
@@ -77,7 +78,7 @@ p {
 	text-shadow: 0.1rem 0.1rem 0.8rem black;
 }
 
-.bg-brown .container .fab {
+.container .fab {
 	font-size: 3rem;
 }
 
